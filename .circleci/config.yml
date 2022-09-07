@@ -11,7 +11,7 @@ jobs:
       - checkout
       - run:
           name: Build app
-          command: npm build
+          command: npm run build
 
       - run:
           name: Test app
