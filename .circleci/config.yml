@@ -9,10 +9,13 @@ jobs:
 
     steps:
       - checkout
+
       - run:
-          name: Build app
-          command: npm run build
+          name: Build App
+          command: |
+            npm install
+            npm run build
 
       - run:
           name: Test app
-          command: npm test
+          command: npm run test
