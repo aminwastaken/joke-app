@@ -1,0 +1,18 @@
+version: 2.1
+
+jobs:
+  build:
+    docker:
+      - image: node:16
+    resource_class: large
+    parallelism: 10
+
+    steps:
+      - checkout
+      - run:
+        name: Build app
+        command: npm build
+
+      - run:
+        name: Test app
+        command: npm test
